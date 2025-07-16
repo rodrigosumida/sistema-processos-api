@@ -47,6 +47,23 @@ class AreaCargoResponsavelController {
     }
   }
 
+  async searchArea(req, res) {
+    try {
+      const { area } = req.params;
+      const data = await AreaCargoResponsavel.find({ area })
+        .populate("area")
+        .populate("cargo")
+        .populate("responsavel");
+      if (!data)
+        return res
+          .status(406)
+          .json({ error: "Error search areaCargoResponsavel." });
+      return res.status(200).json(data);
+    } catch (error) {
+      return res.status(400).json(error);
+    }
+  }
+
   async update(req, res) {
     try {
       const areaCargoResponsavel = await AreaCargoResponsavel.findByIdAndUpdate(

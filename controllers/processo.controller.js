@@ -15,12 +15,16 @@ class ProcessoController {
   async list(req, res) {
     try {
       const processo = await Processo.find({})
-        .populate("estruturaCargos")
-        .populate("area");
+        .populate("area")
+        .populate({
+          path: "estruturaCargos",
+          populate: [{ path: "cargo" }, { path: "responsavel" }],
+        });
       if (!processo)
         return res.status(406).json({ error: "Error list processo." });
       return res.status(200).json(processo);
     } catch (error) {
+      console.log(error);
       return res.status(400).json(error);
     }
   }
