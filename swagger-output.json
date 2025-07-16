@@ -1,0 +1,217 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "API PROCESSOS",
+    "description": "Documentação gerada automaticamente",
+    "version": "1.0.0"
+  },
+  "host": "http://localhost:3002",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "Cargo",
+      "description": "Endpoints relacionados a cargos"
+    },
+    {
+      "name": "Processos",
+      "description": "Endpoints relacionados a processos"
+    }
+  ],
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/api/cargo/": {
+      "post": {
+        "tags": [
+          "Cargo"
+        ],
+        "description": "Criação de um novo cargo",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Cargo"
+        ],
+        "description": "Listagem de todas os cargos",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/api/cargo/{id}": {
+      "get": {
+        "tags": [
+          "Cargo"
+        ],
+        "description": "Busca de cargo por ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Cargo"
+        ],
+        "description": "Atualização de um cargo",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Cargo"
+        ],
+        "description": "Exclusão de um cargo",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/api/cargo/test": {
+      "get": {
+        "tags": [
+          "Cargo"
+        ],
+        "description": "Rota de teste de cargo (sem autenticação)",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/api/processo/": {
+      "post": {
+        "tags": [
+          "Processos"
+        ],
+        "description": "Criação de um novo processo",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Processos"
+        ],
+        "description": "Listagem de todas os processos",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/api/processo/{id}": {
+      "get": {
+        "tags": [
+          "Processos"
+        ],
+        "description": "Busca de processo por ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Processos"
+        ],
+        "description": "Atualização de um processo",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Processos"
+        ],
+        "description": "Exclusão de um processo",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/api/processo/test": {
+      "get": {
+        "tags": [
+          "Processos"
+        ],
+        "description": "Rota de teste de processo (sem autenticação)",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    }
+  }
+}
