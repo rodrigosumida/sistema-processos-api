@@ -13,7 +13,7 @@ class CargoController {
 
   async list(req, res) {
     try {
-      const cargo = await Cargo.find({});
+      const cargo = await Cargo.find({}).sort({ nome: 1 });
       if (!cargo) return res.status(406).json({ error: "Error list cargo." });
       return res.status(200).json(cargo);
     } catch (error) {

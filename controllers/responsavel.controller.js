@@ -14,7 +14,7 @@ class ResponsavelController {
 
   async list(req, res) {
     try {
-      const responsavel = await Responsavel.find({});
+      const responsavel = await Responsavel.find({}).sort({ nome: 1 });
       if (!responsavel)
         return res.status(406).json({ error: "Error list responsavel." });
       return res.status(200).json(responsavel);
